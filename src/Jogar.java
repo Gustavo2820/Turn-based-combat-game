@@ -73,24 +73,36 @@ public class Jogar {
         while (!jogadorVenceu && !oponenteVenceu) {
 
             //Turno do Jogador
-            int atkJogador = escolherAtkJogador();
-            jogador.atacar(oponente, atkJogador, 0);
-            if(oponente.getHP() <= 0) {
-                System.out.println("\nVocê venceu!!!");
-                jogadorVenceu = true;
-                break;
+            if(jogador.getEstamina() > 0)
+            {
+                int atkJogador = escolherAtkJogador();
+                jogador.atacar(oponente, atkJogador, 0, jogador.getEstamina(), oponente.getEstamina());
+                if(oponente.getHP() <= 0) {
+                    System.out.println("\nVocê venceu!!!");
+                    jogadorVenceu = true;
+                    break;
+                }
             }
-            System.out.println("\nHP do oponente: " + oponente.getHP() +"\nHP do jogador: " + jogador.getHP());
+            else System.out.println(jogador.getNome() + " está sem estamina e não irá atacar essa rodada.\n");
+
+            System.out.println("\nHP do oponente: " + oponente.getHP() + "\nEstamina do Oponente: " + oponente.getEstamina() +"\nHP do jogador: " + jogador.getHP() + "\nEstamina do Jogador: " + jogador.getEstamina());
 
             //Turno do Oponente
-            int atkOponente = escolherAtkOpontente();
-            oponente.atacar(jogador, atkOponente, 1);
-            if(jogador.getHP() <= 0) {
-                System.out.println("\nOponente venceu!!!");
-                oponenteVenceu = true;
-                break;
+            if (oponente.getEstamina() > 0)
+            {
+                int atkOponente = escolherAtkOpontente();
+                oponente.atacar(jogador, atkOponente, 1, oponente.getEstamina(), jogador.getEstamina());
+                if(jogador.getHP() <= 0) {
+                    System.out.println("\nOponente venceu!!!");
+                    oponenteVenceu = true;
+                    break;
+                }
             }
-            System.out.println("\nHP do oponente: " + oponente.getHP() +"\nHP do jogador: " + jogador.getHP());
+            else System.out.println(oponente.getNome() + " está sem estamina e não irá atacar essa rodada.\n");
+
+            System.out.println("\nHP do oponente: " + oponente.getHP() + "\nEstamina do Oponente: " + oponente.getEstamina() +"\nHP do jogador: " + jogador.getHP() + "\nEstamina do Jogador: " + jogador.getEstamina());
+            jogador.setEstamina(jogador.getEstamina() + 3);
+            oponente.setEstamina(oponente.getEstamina() + 3);
         }
     }
 

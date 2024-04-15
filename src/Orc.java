@@ -4,6 +4,7 @@ public class Orc implements Raca {
     private int forca = 5;
     private int destreza = 3;
     private int defesa = 5;
+    private int estamina = 50;
 
     @Override
     public int getMaxHP() {
@@ -23,6 +24,11 @@ public class Orc implements Raca {
     @Override
     public int getDefesa() {
         return defesa;
+    }
+
+    @Override
+    public int getEstamina() {
+        return estamina;
     }
 }
 

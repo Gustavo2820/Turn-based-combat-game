@@ -5,25 +5,30 @@ public interface Raca {
      int destreza = 0;
      int defesa = 0;
      int especial = 0;
+     int estamina = 0;
 
-    public default int getMaxHP()
+    default int getMaxHP()
     {
         return maxHP;
     }
 
-    public default int getEspecial() {
+   default int getEspecial() {
         return especial;
     }
 
-    public default int getForca() {
+   default int getForca() {
         return forca;
     }
 
-    public default int getDestreza() {
+   default int getDestreza() {
         return destreza;
     }
 
-    public default int getDefesa() {
+    default int getDefesa() {
         return defesa;
+    }
+
+    default int getEstamina() {
+        return estamina;
     }
 }

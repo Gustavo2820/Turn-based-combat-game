@@ -4,6 +4,7 @@ public class Elfo implements Raca {
     private int forca = 3;
     private int destreza = 5;
     private int defesa = 3;
+    private int estamina = 35;
 
     @Override
     public int getMaxHP() {
@@ -23,5 +24,10 @@ public class Elfo implements Raca {
     @Override
     public int getDefesa() {
         return defesa;
+    }
+
+    @Override
+    public int getEstamina() {
+        return estamina;
     }
 }
