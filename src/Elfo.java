@@ -5,6 +5,7 @@ public class Elfo implements Raca {
     private int destreza = 5;
     private int defesa = 3;
     private int estamina = 35;
+    private int especial = 4;
 
     @Override
     public int getMaxHP() {

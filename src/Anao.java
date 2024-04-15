@@ -5,6 +5,7 @@ public class Anao implements Raca {
     private int destreza = 3;
     private int defesa = 5;
     private int estamina = 40;
+    private int especial = 2;
 
     @Override
     public int getMaxHP() {

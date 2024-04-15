@@ -111,7 +111,7 @@ public class Personagem {
 
     public void turnoDefJogador(Personagem personagem, int dmgAtk, int HP, int destrezaAtk, int estaminaDef) {
 
-        System.out.println("Turno de Reação\n1 - Defender\n2 - Desviar");
+        System.out.println("Turno de Reação\n1 - Defender (3 de estamina)\n2 - Desviar (5 de estamina)");
         Scanner sc = new Scanner(System.in);
         int escolha = sc.nextInt();
         if(escolha == 1){
@@ -192,7 +192,7 @@ public class Personagem {
         this.estamina = estamina;
     }
 
-    public void vizualizarPersonagem()
+    public void visualizarPersonagem()
     {
         System.out.println("\nVizualizar Personagem!\n");
         System.out.println("Nome: " + this.getNome());

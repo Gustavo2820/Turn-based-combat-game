@@ -6,7 +6,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         Personagem personagem = null;
 
-        int resp, i;
+        int resp, i, escolha;
 
         System.out.println("Bem-vindo ao Coliseu!");
         do {
@@ -14,7 +14,9 @@ public class Main {
             System.out.print("| Opção 1 - Introdução     \n");
             System.out.print("| Opção 2 - Criar Personagem         \n");
             System.out.print("| Opção 3 - Jogar          \n");
-            System.out.print("| Opção 4 - Vizualizar Personagem     \n");
+            System.out.print("| Opção 4 - Visualizar Personagem     \n");
+            System.out.print("| Opção 5 - Visualizar Classes     \n");
+            System.out.print("| Opção 6 - Visualizar Raças     \n");
             System.out.print("| Opção 0 - Sair              \n");
             System.out.println("|-----------------------------|\n");
             resp = sc.nextInt();
@@ -102,7 +104,26 @@ public class Main {
                         System.out.println("Crie um personagem antes de visualizar!");
                         break;
                     }
-                    personagem.vizualizarPersonagem();
+                    personagem.visualizarPersonagem();
+                    break;
+                case 5:
+                    System.out.println("Qual classe você deseja visualizar?");
+                    System.out.println("1 - Guerreiro");
+                    System.out.println("2 - Mago");
+                    System.out.println("3 - Samurai");
+                    System.out.println("4 - Lutador");
+                    System.out.println("5 - Arqueiro");
+                    escolha = sc.nextInt();
+                    Classe .visualizarClasse(escolha);
+                    break;
+                case 6:
+                    System.out.println("Qual raça você deseja visualizar?");
+                    System.out.println("1 - Humano");
+                    System.out.println("2 - Orc");
+                    System.out.println("3 - Elfo");
+                    System.out.println("4 - Anão");
+                    escolha = sc.nextInt();
+                    Raca .visualizarRaca(escolha);
                     break;
                 case 0:
                     System.out.println("Até mais!");

@@ -5,6 +5,7 @@ public class Humano implements Raca {
     private int destreza = 5;
     private int defesa = 5;
     private int estamina = 35;
+    private int especial = 2;
 
     @Override
     public int getMaxHP() {

@@ -5,6 +5,7 @@ public class Orc implements Raca {
     private int destreza = 3;
     private int defesa = 5;
     private int estamina = 50;
+    private int especial = 0;
 
     @Override
     public int getMaxHP() {

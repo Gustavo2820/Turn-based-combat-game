@@ -109,10 +109,10 @@ public class Jogar {
     private int escolherAtkJogador() {
 
         System.out.println("Escolha o ataque que deseja usar:");
-        System.out.println("1 - " + jogador.getClasse().getNomeAtaque(1));
-        System.out.println("2 - " + jogador.getClasse().getNomeAtaque(2));
-        System.out.println("3 - " + jogador.getClasse().getNomeAtaque(3));
-        System.out.println("4 - " + jogador.getClasse().getNomeAtaque(4));
+        System.out.println("1 - " + jogador.getClasse().getNomeAtaque(1) +" - 3 de estamina");
+        System.out.println("2 - " + jogador.getClasse().getNomeAtaque(2) +" - 5 de estamina");
+        System.out.println("3 - " + jogador.getClasse().getNomeAtaque(3) +" - 7 de estamina");
+        System.out.println("4 - " + jogador.getClasse().getNomeAtaque(4) +" - 10 de estamina");
         int escolhaAtaque = scanner.nextInt();
         while (escolhaAtaque < 1 || escolhaAtaque > 4) {
             System.out.println("Escolha inválida! Por favor, escolha um número entre 1 e 4:");
